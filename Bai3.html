@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<h1 align="center">nguyên phụ smart checker</h1>
+<p align="center"><input type="text" id="input" value=""></p>
+<script>
+    let input = document.getElementById("input");
+    document.getElementById("input").addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            if((/[aeiou]/gi).test(input.value)){ let checkNguyenam = input.value.match(/[aeiou]/gi).length;
+                alert('có '+checkNguyenam+' nguyên âm trong chuỗi đã nhập');}
+            let checkPhuam = input.value.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
+            alert('có '+checkPhuam+' phụ âm trong chuỗi đã nhập');
+            input.value = "";
+        }
+    })
+</script>
+</body>
+</html>
